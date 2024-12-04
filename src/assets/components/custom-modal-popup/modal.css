@@ -1,0 +1,70 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 150px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #e6d6d6;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid red;
+  width: 80%;
+  animation-name: animateModal;
+  animation-duration: 0.5s;
+  /* transition: opacity 0.5 ease; */
+}
+/* .exit {
+  animation-name: animateModalClose;
+  opacity: 1;
+  transition: all 3s ease-in-out;
+} */
+.close-modal-icon {
+  cursor: pointer;
+  font-size: 44px;
+  float: right;
+  font-weight: bold;
+}
+.header {
+  padding: 4px 16px;
+  background-color: antiquewhite;
+  color: black;
+}
+.body {
+  padding: 2px 16px;
+  height: 200px;
+}
+.footer {
+  padding: 2px 16px;
+  background-color: antiquewhite;
+  color: black;
+}
+
+@keyframes animateModal {
+  from {
+    bottom: 200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animateModalClose {
+  from {
+    bottom: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 200px;
+    opacity: 0;
+  }
+}
